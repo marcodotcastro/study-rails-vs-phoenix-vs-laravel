@@ -1,9 +1,13 @@
 # README
 
 ## https://www.youtube.com/watch?v=G39iAUHh2e8
+Apache Benchmarking Tool
+```
+## https://httpd.apache.org/docs/2.4/programs/ab.html
+sudo apt-get install apache2-util
+```
 
 Rails
-
 
 Seed
 ```
@@ -36,4 +40,15 @@ mix phoenix.server
 
 Postgres
 
+Install
 https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-ubuntu-14-04
+
+
+Test Performance
+```
+Rails
+ab -n 1000 -c 50 http://localhost:3000/books
+
+Phoenix
+ab -n 1000 -c 50 http://localhost:4000/books
+```
