@@ -16,6 +16,13 @@ rails s
 ```
 
 Phoenix
+Pré-requisitos
+sudo apt-get install nodejs
+sudo apt-get install nodejs-legacy
+sudo apt-get install npm
+cd phoenix_books
+npm install
+
 
 Seed
 ```
@@ -24,7 +31,7 @@ mix run priv/repo/seeds.exs
 
 Starting
 ```
-rails s
+mix phoenix.server
 ```
 
 Postgres
