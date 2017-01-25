@@ -9,3 +9,7 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+PhoenixBooks.Repo.insert!(%PhoenixBooks.Book{title: "Ready Player One", author: "Ernest Cline"})
+PhoenixBooks.Repo.insert!(%PhoenixBooks.Book{title: "Rails for dummies", author: "Alex Kovshovik"})
+PhoenixBooks.Repo.insert!(%PhoenixBooks.Book{title: "Benefits mode easy", author: "Jim Scott"})
