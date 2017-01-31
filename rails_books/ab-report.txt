@@ -1,0 +1,85 @@
+rails s
+  ab -n 1000 -c 50 http://localhost:3000/books
+    Benchmarking localhost (be patient)
+    Completed 100 requests
+    Completed 200 requests
+    Completed 300 requests
+    Completed 400 requests
+    Completed 500 requests
+    Completed 600 requests
+    Completed 700 requests
+    Completed 800 requests
+    Completed 900 requests
+    Completed 1000 requests
+    Finished 1000 requests
+
+
+    Server Software:
+    Server Hostname:        localhost
+    Server Port:            3000
+
+    Document Path:          /books
+    Document Length:        3005 bytes
+
+    Concurrency Level:      50
+    Time taken for tests:   33.028 seconds
+    Complete requests:      1000
+    Failed requests:        2
+       (Connect: 0, Receive: 0, Length: 2, Exceptions: 0)
+    Non-2xx responses:      2
+    Total transferred:      4029163 bytes
+    HTML transferred:       3367931 bytes
+    Requests per second:    30.28 [#/sec] (mean)
+    Time per request:       1651.409 [ms] (mean)
+    Time per request:       33.028 [ms] (mean, across all concurrent requests)
+    Transfer rate:          119.13 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.2      0       1
+    Processing:   648 1614 135.4   1610    2338
+    Waiting:      648 1614 135.3   1610    2327
+    Total:        649 1614 135.3   1610    2338
+
+puma -t 8:32 -w 3
+  ab -n 1000 -c 50 http://localhost:3000/books
+    Benchmarking localhost (be patient)
+    Completed 100 requests
+    Completed 200 requests
+    Completed 300 requests
+    Completed 400 requests
+    Completed 500 requests
+    Completed 600 requests
+    Completed 700 requests
+    Completed 800 requests
+    Completed 900 requests
+    Completed 1000 requests
+    Finished 1000 requests
+
+
+    Server Software:
+    Server Hostname:        localhost
+    Server Port:            3000
+
+    Document Path:          /books
+    Document Length:        3005 bytes
+
+    Concurrency Level:      50
+    Time taken for tests:   21.661 seconds
+    Complete requests:      1000
+    Failed requests:        26
+       (Connect: 0, Receive: 0, Length: 26, Exceptions: 0)
+    Non-2xx responses:      26
+    Total transferred:      6330869 bytes
+    HTML transferred:       5678872 bytes
+    Requests per second:    46.17 [#/sec] (mean)
+    Time per request:       1083.057 [ms] (mean)
+    Time per request:       21.661 [ms] (mean, across all concurrent requests)
+    Transfer rate:          285.42 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    0   0.3      0       2
+    Processing:    21 1068 2034.4    420   11997
+    Waiting:       21 1067 2034.2    420   11996
+    Total:         21 1068 2034.5    420   11998
