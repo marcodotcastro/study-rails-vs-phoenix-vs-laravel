@@ -7,6 +7,15 @@ development:
   username: "postgres"
   password: "postgres"
 
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: rails_books_production
+  host: localhost
+  pool: 5
+  username: "postgres"
+  password: "postgres"
+
 test:
   adapter: postgresql
   encoding: unicode

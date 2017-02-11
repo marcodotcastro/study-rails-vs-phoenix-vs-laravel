@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Add Nginx
 
-Things you may want to cover:
+sudo apt-get install nginx  
 
-* Ruby version
+sudo mv PROJECT_NAME/nginx.conf  /etc/nginx/sites-available/PROJECT_NAME
 
-* System dependencies
+sudo ln -s /etc/nginx/sites-available/PROJECT_NAME /etc/nginx/sites-enabled/PROJECT_NAME
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+sudo ln -s /HOME_PROJECT/PROJECT_NAME /var/www/PROJECT_NAME
