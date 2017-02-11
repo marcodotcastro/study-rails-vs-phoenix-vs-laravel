@@ -7,7 +7,7 @@ Apache Benchmarking Tool
 ------
 > https://httpd.apache.org/docs/2.4/programs/ab.html
 
-> sudo apt-get install apache2-util
+> sudo apt-get install apache2-utils
 
 Rails
 --
