@@ -9,15 +9,32 @@ Apache Benchmarking Tool
 
 > sudo apt-get install apache2-utils
 
+Pré-requisitos
+---
+> nodejs
+
+> nodejs-legacy
+
+> npm
+
+> docker
+
+> docker-composer
+
+Postgres
+---
+Install
+> docker-composer up
+
 Rails
 --
 
-Pré-requisitos
-
-> sudo apt-get install nodejs
+Dependency
+> cd rails_books
+> bundle
 
 Seed
->rails db:seed
+>rails db:drop db:create db:migrate db:seed
 
 Starting
 > rails s
@@ -25,28 +42,20 @@ Starting
 Phoenix
 --
 
-Pré-requisitos
-
-> sudo apt-get install nodejs
-
-> sudo apt-get install nodejs-legacy
-
-> sudo apt-get install npm
+Dependency
 
 > cd phoenix_books
 
 > npm install
 
+> mix deps.get
+
 Seed
+> mix ecto.drop ecto.create ecto.migrate
 > mix run priv/repo/seeds.exs
 
 Starting
 > mix phoenix.server
-
-Postgres
----
-Install
-> docker-composer up
 
 Test Performance
 --

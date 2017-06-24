@@ -38,6 +38,6 @@ config :phoenix_books, PhoenixBooks.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "phoenix_books_dev",
+  database: "phoenix_books_development",
   hostname: "localhost",
   pool_size: 10
