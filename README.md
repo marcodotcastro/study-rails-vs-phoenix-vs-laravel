@@ -57,11 +57,24 @@ Seed
 Starting
 > mix phoenix.server
 
+Laravel
+--
+Dependency
+
+Seed
+> php artisan migrate       
+> php artisan db:seed
+
+Starting
+> php artisan serve
+
 Test Performance
 --
 Rails
-
 > ab -n 1000 -c 50 http://localhost:3000/books
 
 Phoenix
 > ab -n 1000 -c 50 http://localhost:4000/books
+
+Laravel
+> ab -n 1000 -c 50 http://localhost:8000/books

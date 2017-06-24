@@ -11,6 +11,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+      for ($i = 1; $i <= 10; $i++) {
+        DB::table('books')->insert([
+            'title' => 'Ready Player One',
+            'author' => 'Ernest Cline'
+        ]);
+        DB::table('books')->insert([
+            'title' => 'Rails for dummies',
+            'author' => 'Alex Kovshovik'
+        ]);
+        DB::table('books')->insert([
+            'title' => 'Benefits mode easy',
+            'author' => 'Jim Scott'
+        ]);
+      }
     }
 }
