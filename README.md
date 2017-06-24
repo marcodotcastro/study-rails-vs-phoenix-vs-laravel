@@ -46,7 +46,7 @@ Starting
 Postgres
 ---
 Install
-> https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-ubuntu-14-04
+> docker-composer up
 
 Test Performance
 --

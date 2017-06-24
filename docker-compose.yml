@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  postgres:
+    container_name: postgres_performance
+    image: postgres:9.5
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+    - /opt/postgresql:/var/lib/postgresql
