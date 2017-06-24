@@ -1,0 +1,9 @@
+Install
+
+sudo apt-get install php7.0-cli php-mcrypt php-gd php-mbstring php7.0-zip php7.0-xml
+
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+
+composer global require "laravel/installer"
