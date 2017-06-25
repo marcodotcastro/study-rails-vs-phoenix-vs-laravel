@@ -13,31 +13,41 @@ mix phoenix.server
     Completed 1000 requests
     Finished 1000 requests
 
-
     Server Software:
     Server Hostname:        localhost
     Server Port:            4000
 
     Document Path:          /books
-    Document Length:        2960 bytes
+    Document Length:        18782 bytes
 
     Concurrency Level:      50
-    Time taken for tests:   1.532 seconds
+    Time taken for tests:   1.881 seconds
     Complete requests:      1000
     Failed requests:        0
-    Total transferred:      3460000 bytes
-    HTML transferred:       2960000 bytes
-    Requests per second:    652.67 [#/sec] (mean)
-    Time per request:       76.608 [ms] (mean)
-    Time per request:       1.532 [ms] (mean, across all concurrent requests)
-    Transfer rate:          2205.33 [Kbytes/sec] received
+    Total transferred:      19283000 bytes
+    HTML transferred:       18782000 bytes
+    Requests per second:    531.72 [#/sec] (mean)
+    Time per request:       94.034 [ms] (mean)
+    Time per request:       1.881 [ms] (mean, across all concurrent requests)
+    Transfer rate:          10012.88 [Kbytes/sec] received
 
     Connection Times (ms)
-                  min  mean[+/-sd] median   max
-    Connect:        0    0   0.2      0       2
-    Processing:    23   76  54.7     57     280
-    Waiting:       23   76  54.7     57     280
-    Total:         23   76  54.8     57     280
+                min  mean[+/-sd] median   max
+    Connect:        0    0   0.2      0       1
+    Processing:    27   92  23.6     93     155
+    Waiting:       27   92  23.6     93     155
+    Total:         27   92  23.6     93     156
+
+    Percentage of the requests served within a certain time (ms)
+    50%     93
+    66%    102
+    75%    108
+    80%    112
+    90%    122
+    95%    129
+    98%    141
+    99%    146
+    100%    156 (longest request)
 
   ab -n 100000 -c 500 http://localhost:4000/books
     Benchmarking localhost (be patient)
@@ -59,62 +69,33 @@ mix phoenix.server
     Server Port:            4000
 
     Document Path:          /books
-    Document Length:        2960 bytes
+    Document Length:        18782 bytes
 
     Concurrency Level:      500
-    Time taken for tests:   77.484 seconds
+    Time taken for tests:   202.557 seconds
     Complete requests:      100000
     Failed requests:        0
-    Total transferred:      346000000 bytes
-    HTML transferred:       296000000 bytes
-    Requests per second:    1290.59 [#/sec] (mean)
-    Time per request:       387.419 [ms] (mean)
-    Time per request:       0.775 [ms] (mean, across all concurrent requests)
-    Transfer rate:          4360.80 [Kbytes/sec] received
+    Total transferred:      1928300000 bytes
+    HTML transferred:       1878200000 bytes
+    Requests per second:    493.69 [#/sec] (mean)
+    Time per request:       1012.786 [ms] (mean)
+    Time per request:       2.026 [ms] (mean, across all concurrent requests)
+    Transfer rate:          9296.66 [Kbytes/sec] received
 
     Connection Times (ms)
-                  min  mean[+/-sd] median   max
-    Connect:        0    9  90.6      0    3000
-    Processing:    30  378 120.1    368    1016
-    Waiting:       30  377 119.8    368    1016
-    Total:         30  387 154.6    370    3488
+                min  mean[+/-sd] median   max
+    Connect:        0    3  52.0      0    1003
+    Processing:    63 1008 271.0   1013    2446
+    Waiting:       63 1008 271.0   1012    2446
+    Total:         63 1010 273.6   1014    2446
 
-  ab -n 100000 -c 5 http://localhost:4000/books
-    Benchmarking localhost (be patient)
-    Completed 10000 requests
-    Completed 20000 requests
-    Completed 30000 requests
-    Completed 40000 requests
-    Completed 50000 requests
-    Completed 60000 requests
-    Completed 70000 requests
-    Completed 80000 requests
-    Completed 90000 requests
-    Completed 100000 requests
-    Finished 100000 requests
-
-
-    Server Software:
-    Server Hostname:        localhost
-    Server Port:            4000
-
-    Document Path:          /books
-    Document Length:        2960 bytes
-
-    Concurrency Level:      5
-    Time taken for tests:   606.325 seconds
-    Complete requests:      100000
-    Failed requests:        0
-    Total transferred:      346000000 bytes
-    HTML transferred:       296000000 bytes
-    Requests per second:    164.93 [#/sec] (mean)
-    Time per request:       30.316 [ms] (mean)
-    Time per request:       6.063 [ms] (mean, across all concurrent requests)
-    Transfer rate:          557.28 [Kbytes/sec] received
-
-    Connection Times (ms)
-                  min  mean[+/-sd] median   max
-    Connect:        0    0   0.1      0       7
-    Processing:     7   30  16.9     24     191
-    Waiting:        7   30  16.9     24     191
-    Total:          7   30  16.9     25     191
+    Percentage of the requests served within a certain time (ms)
+    50%   1014
+    66%   1119
+    75%   1186
+    80%   1226
+    90%   1350
+    95%   1464
+    98%   1589
+    99%   1675
+    100%   2446 (longest request)

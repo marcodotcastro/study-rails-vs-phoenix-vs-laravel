@@ -8,9 +8,12 @@ Phoenix, PENDENTE DE ANALISE
 Laravel, PENDENTE DE ANALISE
 
 Máquina
+---
 > Ubuntu 16
+
 > 8gb Ram
-> i7 Cpu 
+
+> i7 Cpu
 
 Apache Benchmarking Tool
 ------
