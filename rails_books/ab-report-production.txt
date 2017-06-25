@@ -1,0 +1,152 @@
+rails s -e production
+  ab -n 1000 -c 50 http://localhost:3000/books
+  Benchmarking localhost (be patient)
+  Completed 100 requests
+  Completed 200 requests
+  Completed 300 requests
+  Completed 400 requests
+  Completed 500 requests
+  Completed 600 requests
+  Completed 700 requests
+  Completed 800 requests
+  Completed 900 requests
+  Completed 1000 requests
+  Finished 1000 requests
+
+  Server Software:
+  Server Hostname:        localhost
+  Server Port:            3000
+
+  Document Path:          /books
+  Document Length:        9649 bytes
+
+  Concurrency Level:      50
+  Time taken for tests:   8.926 seconds
+  Complete requests:      1000
+  Failed requests:        0
+  Total transferred:      10311000 bytes
+  HTML transferred:       9649000 bytes
+  Requests per second:    112.03 [#/sec] (mean)
+  Time per request:       446.324 [ms] (mean)
+  Time per request:       8.926 [ms] (mean, across all concurrent requests)
+  Transfer rate:          1128.03 [Kbytes/sec] received
+
+  Connection Times (ms)
+              min  mean[+/-sd] median   max
+  Connect:        0    0   0.2      0       1
+  Processing:    99  438  38.4    444     559
+  Waiting:       98  438  38.4    443     559
+  Total:         99  438  38.3    444     560
+
+  Percentage of the requests served within a certain time (ms)
+  50%    444
+  66%    449
+  75%    453
+  80%    456
+  90%    463
+  95%    469
+  98%    482
+  99%    507
+  100%    560 (longest request)
+
+puma -t 8:32 -w 3 -b tcp://localhost:3000 -e production
+  ab -n 1000 -c 50 http://localhost:3000/books
+  Benchmarking localhost (be patient)
+  Completed 100 requests
+  Completed 200 requests
+  Completed 300 requests
+  Completed 400 requests
+  Completed 500 requests
+  Completed 600 requests
+  Completed 700 requests
+  Completed 800 requests
+  Completed 900 requests
+  Completed 1000 requests
+  Finished 1000 requests
+
+  Server Software:
+  Server Hostname:        localhost
+  Server Port:            3000
+
+  Document Path:          /books
+  Document Length:        9649 bytes
+
+  Concurrency Level:      50
+  Time taken for tests:   4.462 seconds
+  Complete requests:      1000
+  Failed requests:        0
+  Total transferred:      10311000 bytes
+  HTML transferred:       9649000 bytes
+  Requests per second:    224.14 [#/sec] (mean)
+  Time per request:       223.077 [ms] (mean)
+  Time per request:       4.462 [ms] (mean, across all concurrent requests)
+  Transfer rate:          2256.92 [Kbytes/sec] received
+
+  Connection Times (ms)
+              min  mean[+/-sd] median   max
+  Connect:        0    0   0.3      0       2
+  Processing:     9  215 179.8    153     666
+  Waiting:        9  215 179.8    152     666
+  Total:          9  215 179.9    153     666
+
+  Percentage of the requests served within a certain time (ms)
+  50%    153
+  66%    289
+  75%    355
+  80%    395
+  90%    509
+  95%    544
+  98%    581
+  99%    594
+  100%    666 (longest request)
+
+puma -t 32:32 -w 30 -b tcp://localhost:3000 -e production
+  ab -n 100000 -c 500 http://localhost:3000/books
+  Benchmarking localhost (be patient)
+  Completed 10000 requests
+  Completed 20000 requests
+  Completed 30000 requests
+  Completed 40000 requests
+  Completed 50000 requests
+  Completed 60000 requests
+  Completed 70000 requests
+  Completed 80000 requests
+  Completed 90000 requests
+  Completed 100000 requests
+  Finished 100000 requests
+
+  Server Software:
+  Server Hostname:        localhost
+  Server Port:            3000
+
+  Document Path:          /books
+  Document Length:        9649 bytes
+
+  Concurrency Level:      500
+  Time taken for tests:   447.990 seconds
+  Complete requests:      100000
+  Failed requests:        0
+  Total transferred:      1031100000 bytes
+  HTML transferred:       964900000 bytes
+  Requests per second:    223.22 [#/sec] (mean)
+  Time per request:       2239.950 [ms] (mean)
+  Time per request:       4.480 [ms] (mean, across all concurrent requests)
+  Transfer rate:          2247.67 [Kbytes/sec] received
+
+  Connection Times (ms)
+                min  mean[+/-sd] median   max
+  Connect:        0    1   7.6      0     323
+  Processing:    14 2233 1984.6   1586   11072
+  Waiting:       10 2231 1984.7   1583   11072
+  Total:         15 2234 1984.5   1586   11072
+
+  Percentage of the requests served within a certain time (ms)
+    50%   1586
+    66%   2341
+    75%   2984
+    80%   3453
+    90%   5207
+    95%   6676
+    98%   8132
+    99%   8864
+   100%  11072 (longest request)

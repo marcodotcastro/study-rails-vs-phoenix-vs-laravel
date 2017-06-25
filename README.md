@@ -3,6 +3,15 @@ README
 [Origem] (https://www.youtube.com/watch?v=G39iAUHh2e8).
 --------
 
+Rails, existe a gestão de ambiente como development, production e test
+Phoenix, PENDENTE DE ANALISE
+Laravel, PENDENTE DE ANALISE
+
+Máquina
+> Ubuntu 16
+> 8gb Ram
+> i7 Cpu 
+
 Apache Benchmarking Tool
 ------
 > https://httpd.apache.org/docs/2.4/programs/ab.html
@@ -11,12 +20,6 @@ Apache Benchmarking Tool
 
 Pré-requisitos
 ---
-> nodejs
-
-> nodejs-legacy
-
-> npm
-
 > docker
 
 > docker-composer
@@ -28,16 +31,17 @@ Install
 
 Rails
 --
+Configuração de Produção Básica sem tuning
 
 Dependency
 > cd rails_books
 > bundle
 
 Seed
->rails db:drop db:create db:migrate db:seed
+> RAILS_ENV=production rails db:drop db:create db:migrate db:seed
 
 Starting
-> rails s
+> rails s -e production
 
 Phoenix
 --

@@ -1,0 +1,51 @@
+php artisan serve
+  ab -n 1000 -c 50 http://localhost:8000/books
+  Benchmarking localhost (be patient)
+  Completed 100 requests
+  Completed 200 requests
+  Completed 300 requests
+  Completed 400 requests
+  Completed 500 requests
+  Completed 600 requests
+  Completed 700 requests
+  Completed 800 requests
+  Completed 900 requests
+  Completed 1000 requests
+  Finished 1000 requests
+
+
+  Server Software:
+  Server Hostname:        localhost
+  Server Port:            8000
+
+  Document Path:          /books
+  Document Length:        10374 bytes
+
+  Concurrency Level:      50
+  Time taken for tests:   10.227 seconds
+  Complete requests:      1000
+  Failed requests:        0
+  Total transferred:      11370968 bytes
+  HTML transferred:       10374000 bytes
+  Requests per second:    97.78 [#/sec] (mean)
+  Time per request:       511.366 [ms] (mean)
+  Time per request:       10.227 [ms] (mean, across all concurrent requests)
+  Transfer rate:          1085.76 [Kbytes/sec] received
+
+  Connection Times (ms)
+                min  mean[+/-sd] median   max
+  Connect:        0    0   0.2      0       1
+  Processing:    87  499  64.4    494     648
+  Waiting:       86  498  64.3    493     647
+  Total:         88  499  64.2    494     648
+
+  Percentage of the requests served within a certain time (ms)
+    50%    494
+    66%    500
+    75%    511
+    80%    518
+    90%    559
+    95%    609
+    98%    639
+    99%    646
+   100%    648 (longest request)
