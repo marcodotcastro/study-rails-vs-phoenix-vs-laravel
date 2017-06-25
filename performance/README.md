@@ -1,3 +1,19 @@
+Dados
+--
+Modelo de Dados
+
+* Tabela
+  * Books
+
+* Atributos
+  * title
+  * author
+
+* Dados
+  * title: "Ready Player One" x30
+  * author: "Ernest Cline" x30
+
+
 Test Performance
 --
 Rails
