@@ -4,7 +4,9 @@ README
 --------
 
 Rails, existe a gestão de ambiente como development, production e test
+
 Phoenix, PENDENTE DE ANALISE
+
 Laravel, PENDENTE DE ANALISE
 
 Máquina
