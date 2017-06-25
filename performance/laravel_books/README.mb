@@ -1,13 +1,13 @@
-Install
+Instalar
+--
+> sudo apt-get install php7.0-cli php-mcrypt php-gd php-mbstring php7.0-zip php7.0-xml php7.0-pgsql postgresql-client
 
-sudo apt-get install php7.0-cli php-mcrypt php-gd php-mbstring php7.0-zip php7.0-xml php7.0-pgsql postgresql-client
+> curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 
-curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+> export PATH="$PATH:$HOME/.composer/vendor/bin"
 
-export PATH="$PATH:$HOME/.composer/vendor/bin"
+> composer global require "laravel/installer"
 
-composer global require "laravel/installer"
+> psql -h hostname -U postgres
 
-psql -h hostname -U postgres
-
-CREATE DATABASE laravel_books_development;
+> CREATE DATABASE laravel_books_development;
