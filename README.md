@@ -6,5 +6,6 @@ As tecnologias e frameworks são:
 * Ruby/Rails (Iniciado)
 * Exilir/Phoenix (Iniciado)
 * Php/Laravel (Iniciado)
+* Python/Django (Não Iniciado)
 * Java/Play (Não Iniciado)
-* Nodejs/Express (Não Iniciado) 
+* Nodejs/Express ou Sails (Não Iniciado)
